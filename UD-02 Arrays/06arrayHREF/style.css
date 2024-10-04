@@ -1,0 +1,17 @@
+div{
+    width: 15%;
+    padding: 1%;
+    margin: auto;
+    text-align: center;
+    background-color: rgb(80, 73, 73);
+    border-radius: 10px;
+}
+
+a{
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+a:active{
+    color: whitesmoke;
+}

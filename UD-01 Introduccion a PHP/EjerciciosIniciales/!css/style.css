@@ -1,0 +1,41 @@
+h2{
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+table{
+    border: 1px solid;
+    border-collapse: collapse;
+    width: 30%;
+    height: 60%;
+    margin: auto;
+}
+
+th{
+    color: rgb(72, 110, 143); 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    height: 2rem;   
+}
+
+td{
+    border: 1px solid;
+    width: 15%;
+    text-align: center;
+
+}
+
+/*Version 4 y posteriores*/
+form{
+    margin: 1% auto;
+    padding: 1%;
+    width: 30%;
+    height: auto;
+    border: 1px solid;
+    text-align: center;  
+}
+
+input[type=number]{
+    display: block;
+    width: 100%;
+    margin-bottom: 3%;
+}
