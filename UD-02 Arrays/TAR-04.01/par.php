@@ -23,14 +23,19 @@
     <body>
         <table>
             <thead>
-                <th>Número</th>
-                <th>Cuadrado</th>
-                <th>PAR</th>
+                <tr>
+                    <th>Número</th>
+                    <th>Cuadrado</th>
+                    <th>PAR</th>
+                </tr>
             </thead>
             <tbody>
-                <?php
+                <tr>
+
+                    <?php
                     echo '<td>'.$_GET['numero'].'</td>'.'<td>'.$_GET['cuadrado'];
-                ?>
+                    ?>
+                </tr>
             </tbody>
         </table>
     </body>

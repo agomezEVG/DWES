@@ -27,13 +27,13 @@
             <div>
                 <ul>
                      <li>
-                         <h3>Páginas externas</h3>
-                         <ul>
+                        <h3>Páginas externas</h3>
+                        <ul>
                             <li><a href="https://www.oxfam.org/es/5-desastres-naturales-que-reclaman-medidas-contra-el-cambio-climatico" target="_blank">Desastres naturales y cambio climático - Oxfam</a></li>
                             <li><a href="https://www.worldwildlife.org/descubre-wwf/historias/acaso-el-cambio-climatico-esta-aumentando-el-riesgo-de-desastres" target="_blank">El riesgo de desastres por el cambio climático - WWF</a></li>
                             <li><a href="https://onu-habitat.org/index.php/sequias-tormentas-e-inundaciones-el-agua-y-el-cambio-climatico-dominan-la-lista-de-desastres" target="_blank">El agua y el cambio climático - ONU Habitat</a></li>
                             <li><a href="https://www2.cruzroja.es/web/ahora/-/desastres-naturales-cambio-climatico-impacto-personas-mas-vulnerables" target="_blank">Impacto de desastres en personas vulnerables - Cruz Roja</a></li>
-                         </ul>
+                        </ul>
                      </li>
                 </ul>
             </div>

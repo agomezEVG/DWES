@@ -1,6 +1,7 @@
 <?php
     $num=$_GET['numero'];
     
+    /*La funcion parImpar mediante un numero calcula si es par o impar y retorna un booleano*/
     function parImpar($num, &$cuadrado){
         $cuadrado=$num*$num;
         if($num%2==0){
