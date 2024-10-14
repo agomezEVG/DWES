@@ -1,8 +1,12 @@
 <?php
     class Fecha{
-        private array $mesesDias;
+        private array $mesesDias; //Array que establece los meses y los dias.
 
-        private array $fechaSplit;
+        private array $fechaSplit; //Array que divide la fecha que el usuario envia.
+
+        private $bisiesto;
+
+        //La funcion constructor estable el array de los meses con los dias de cada mes.
         public function __construct(){
             
             $this->mesesDias = array(
@@ -20,26 +24,38 @@
                 12 => array("mes" => "Diciembre","dias" => 31)
             );
         }
+
+        //Funcion que realiza todas la comprobaciones del programa.
         public function comprobar($fecha){
             $this->fechaSplit=explode("-", $fecha);
-            $bisiesto=$this->bisiesto();
-            $this->mostrarFecha($bisiesto);
+            $this->bisiesto=$this->nobisiesto($this->fechaSplit[0]);
         }
 
-        public function bisiesto(){
-            if($this->fechaSplit[0]%4==0 && ($this->fechaSplit[0]%100!=0 || $this->fechaSplit[0]%400==0)){
+        //La funcion bisiesto se establece en "private" porque solo se va a usar en esta clase.
+        private function nobisiesto($anio){
+            if($anio%4==0 && ($anio%100!=0 || $anio%400==0)){
                 $this->mesesDias[2]["dias"]= 29;
                 return true;
             }
             return false;
         }
-        public function mostrarFecha($bisiesto){
 
-            echo $this->fechaSplit[2]." de ".$this->mesesDias[(int)$this->fechaSplit[1]]["mes"]." de ".$this->fechaSplit[0]."<br>";
-            if($bisiesto)
-                echo 'El año '.$this->fechaSplit[0].' es bisiesto <br>';
+        //Función que muestra la fecha cambiada a formato "dd de mes de aaaa" y especifica si el año es bisiesto.
+        public function mostrarFecha(){
+            //Hay que forzar el mes como un entero porque al comparar busca una cadena.
+            return $this->fechaSplit[2]." de ".$this->mesesDias[(int)$this->fechaSplit[1]]["mes"]." de ".$this->fechaSplit[0]."<br><br>"; 
+        }
+        
+        public function mostrarBisiesto()
+        {
+            if($this->bisiesto)
+            {
+                return 'El mes tiene '.$this->mesesDias[$this->fechaSplit[1]]["dias"].' <br><br> El año '.$this->fechaSplit[0].' es bisiesto <br>';
+            }
             else
-                echo 'El año '.$this->fechaSplit[0].' no es bisiesto <br>';
+            {
+                return 'El mes tiene '.$this->mesesDias[$this->fechaSplit[1]]["dias"].' <br><br> El año '.$this->fechaSplit[0].' no es bisiesto <br>';
+            }
         }
     }
 ?>
